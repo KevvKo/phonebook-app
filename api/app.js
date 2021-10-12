@@ -1,7 +1,7 @@
 'use strict';
 
-const { ApolloServer } = require('apollo-server');
-const { schema } = require('./src/graphql/schema');
+import { ApolloServer } from 'apollo-server';
+import { schema } from './src/graphql/schema';
 
 async function startServer(){
 
@@ -10,7 +10,7 @@ async function startServer(){
   })
 
   server.listen().then(({ url }) => {
-    console.log(`🚀  Server ready at ${url}`);
+    console.log(`🚀  Server ready at ${url}`)
   });
 }
 

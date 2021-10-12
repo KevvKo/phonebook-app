@@ -1,7 +1,7 @@
-const { gql } = require('apollo-server-express');
-const { makeExecutableSchema } = require('@graphql-tools/schema');
-const { merge } = require('lodash')
-const { PhoneBookEntry, phoneBookEntryResolvers } = require('./phonebookEntry');
+import { gql } from 'apollo-server-express';
+import { makeExecutableSchema } from '@graphql-tools/schema';
+import { merge } from 'lodash'
+import { PhoneBookEntry, phoneBookEntryResolvers } from './phonebookEntry';
 
 const Query = gql`
 
