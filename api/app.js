@@ -1,7 +1,7 @@
 'use strict';
 
-import { ApolloServer } from 'apollo-server';
-import { schema } from './src/graphql/schema';
+const { ApolloServer } = require('apollo-server');
+const      { schema } = require('./src/graphql/schema');
 
 async function startServer(){
 
