@@ -1,17 +1,22 @@
 const { gql } = require('apollo-server-express');
 const { makeExecutableSchema } = require('@graphql-tools/schema');
-const { merge } = require('lodash')
+const { merge, filter } = require('lodash')
+const { filterArray } = require('../assets/utils');
 const { PhoneBookEntry, phoneBookEntryResolvers } = require('./phonebookEntry');
+const phoneBook = require('../assets/data/telefonbuch.json');
 
 const Query = gql`
 
 type Query{
-  phoneBookEntry: PhoneBookEntry!
+  phoneBookEntrys( query: String! ): [PhoneBookEntry!]
 }`
 
 const queryResolvers = {
   Query: {
-    phoneBookEntry: async (parent, args, context) => {}
+    phoneBookEntrys: async (parent, args, context) => {
+      const { query } = args;
+      return filterArray( phoneBook, query );
+    }
   }
 }
 
