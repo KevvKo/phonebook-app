@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docker-local": "docker build . -f Dockerfile -t dev-phonebook-local"
+    "docker:build": "docker build . -t dev-phonebook",
+    "docker:start": "docker run -p 4000:4000 -d dev-phonebook"
   },
   "keywords": [],
   "author": "",
