@@ -9,6 +9,6 @@ export default function SearchField() {
   const [ t ] = useTranslation('common');
   
   return (
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <TextField id="outlined-basic" label={ t('searchField.label') } variant="outlined" />
   );
 }

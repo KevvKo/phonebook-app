@@ -8,13 +8,13 @@
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": "latest",
+        "ecmaVersion": 12,
         "sourceType": "module"
     },
     "plugins": [
         "react"
     ],
     "rules": {
-        "semi": ["warning", "always"]
+        "semi": [1, "always"]
     }
 }
