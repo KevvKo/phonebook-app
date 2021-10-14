@@ -4,12 +4,9 @@ const PhoneBookEntry = gql`
 
 type PhoneBookEntry {
   name: String!
-  number: String
+  phone: String
 }`
-
-const phoneBookEntryResolvers = {}
 
 module.exports = {
   PhoneBookEntry,
-  phoneBookEntryResolvers
 };

@@ -6,7 +6,7 @@ export const PHONE_BOOK_QUERY = gql`
     ) {
         PhoneBookEntrys(query: $query){
             name
-            number
+            phone
         }
     }
 `;

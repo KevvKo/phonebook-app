@@ -20,7 +20,7 @@ export default function PhoneBookTable() {
   return (
     
     <TableContainer component={Paper}>
-      <Table aria-label="simple table">
+      <Table>
         <TableHead>
           <TableRow>
             <TableCell sx={{ width: '50%'}}> {t( 'phoneBookTable.name' )} </TableCell>
@@ -33,10 +33,13 @@ export default function PhoneBookTable() {
               
               <TableRow
                 key={ i }
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                sx={{ '&:last-child td, &:last-child': { border: 0 } }}
               >
-                <TableCell component="th" scope="row">
+                <TableCell component="td" scope="row">
                   { c.name }
+                </TableCell>
+                <TableCell component="td" scope="row">
+                  { c.phone }
                 </TableCell>
               </TableRow>
             ))
