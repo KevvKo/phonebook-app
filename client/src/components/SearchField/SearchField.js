@@ -1,24 +1,39 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // Componrnts
 import TextField from '@mui/material/TextField';
 // Hooks
 import { useTranslation } from 'react-i18next';
-import { useQuery } from '@apollo/client';
-// GQL
-import { PHONE_BOOK_QUERY } from '../../graphql/phonebook/phoneBookQuery';
+import { usePhoneBook } from '../../hooks/usePhoneBook';
 
-export default function SearchField() {
+export default function SearchField(props) {
 
   const [ t ] = useTranslation('common');
-  
-  function queryPoneBook( e ) {
-    const query = e.target.value;
-    const {error, loading, data } = useQuery( PHONE_BOOK_QUERY, {
-      variables: { query }
+  const { getPhoneBookEntrys , data } = usePhoneBook();
+
+  const handleChange = (e) => {
+
+    const value = e.target.value;
+    getPhoneBookEntrys({ 
+      variables: {
+        query: value
+      }
     });
-  }
+  };
+
+  if(props.data) props.onChange( data );
 
   return (
-      <TextField id="outlined-basic" label={ t('searchField.label') } variant="filled" onChange={ queryPoneBook } />
+      <TextField 
+        onChange={ handleChange } 
+        id="outlined-basic" 
+        label={ t('searchField.label') } 
+        variant="filled" 
+      />
   );
+}
+
+SearchField.propTypes = {
+  data: PropTypes.object,
+  onChange: PropTypes.func
 }
