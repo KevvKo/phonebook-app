@@ -1,5 +1,9 @@
 {
     "searchField": {
         "label": "Search"
+    },
+    "phoneBookTable": {
+        "phoneNumber": "Phonenumber",
+        "name": "Name"
     }
 }
