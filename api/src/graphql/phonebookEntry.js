@@ -4,7 +4,7 @@ const PhoneBookEntry = gql`
 
 type PhoneBookEntry {
   name: String!
-  phoneNumber: String
+  number: String
 }`
 
 const phoneBookEntryResolvers = {}
