@@ -4,8 +4,6 @@ import './scripts/i18n';
 // Components
 import SearchField from './components/SearchField/SearchField';
 import PhoneBookTable from './components/PhoneBookTable/PhoneBookTable';
-// Hooks
-import { useState } from 'react';
 
 function App() {
 
