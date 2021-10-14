@@ -1,0 +1,22 @@
+{
+  "name": "phonebook-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client:start": "cd client && npm start",
+    "api:start": "cd api && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevvKo/phonebook-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevvKo/phonebook-app/issues"
+  },
+  "homepage": "https://github.com/KevvKo/phonebook-app#readme"
+}
