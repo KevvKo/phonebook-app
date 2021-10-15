@@ -13,7 +13,7 @@ import { setPhoneBook } from '../../store/slices/phoneBook';
 export default function SearchField(props) {
 
   const [ t ] = useTranslation('common');
-  const { getPhoneBookEntrys , data, loading} = usePhoneBook();
+  const { getPhoneBookEntrys , data, loading } = usePhoneBook();
   const dispatch = useDispatch();
   
   const handleChange = (e) => {
@@ -27,10 +27,11 @@ export default function SearchField(props) {
   };
 
   useEffect(() => {
+
     if( data && !loading){
       dispatch( setPhoneBook( data.PhoneBookEntrys ));
     }
-  });
+  }, [ data, loading ]);
 
   return (
       <TextField 
