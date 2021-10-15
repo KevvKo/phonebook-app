@@ -52,7 +52,7 @@ export default function SearchField() {
         borderColor:  'var(--arctic-blue-color-light)',
       },
       '&.Mui-focused fieldset': {
-        borderColor: 'var(--arctic-blue-color-dark)',
+        borderColor: 'var(--arctic-blue-color-20)',
       },
     }
   };
