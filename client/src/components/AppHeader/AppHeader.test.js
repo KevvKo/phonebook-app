@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '../../scripts/test-utils';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import AppHeader from './AppHeader';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
