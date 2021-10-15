@@ -1,6 +1,8 @@
 {   
     "appHeader": {
-        "contacts": "Contacts"
+        "close": "Close",
+        "contacts": "Contacts",
+        "language": "Language"
     },
     "phoneBookTable": {
         "phoneNumber": "Phonenumber",

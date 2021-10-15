@@ -1,11 +1,12 @@
 {
     "appHeader": {
-        "contacts": "Kontakte"
+        "close": "Schließen",
+        "contacts": "Kontakte",
+        "language": "Sprache"
     },
     "phoneBookTable": {
         "phoneNumber": "Telefonnummer",
-        "name": "Name"
-        
+        "name": "Name"  
     },
     "searchField": {
         "label": "Suche"
