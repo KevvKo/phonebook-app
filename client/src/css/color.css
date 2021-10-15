@@ -58,6 +58,16 @@
   --arctic-blue-color-light: hsl(180, 16%, 86%);
   --arctic-blue-color-dark: hsl(180, 27%, 48%);
 
+  --grey-color: hsl(var(--grey-h), var(--grey-s), var(--grey-l));
+  --grey-color-10: hsl(var(--grey-h), var(--grey-s), calc(var(--grey-l) + 5%));
+  --grey-color-20: hsl(var(--grey-h), var(--grey-s), calc(var(--grey-l) + 10%));
+  --grey-color-30: hsl(var(--grey-h), var(--grey-s), calc(var(--grey-l) + 15%));
+  --grey-color-40: hsl(var(--grey-h), var(--grey-s), calc(var(--grey-l) + 20%));
+  --grey-color-50: hsl(var(--grey-h), var(--grey-s), calc(var(--grey-l) + 25%));
+  --grey-color-60: hsl(var(--grey-h), var(--grey-s), calc(var(--grey-l) + 30%));
+  --grey-color-70: hsl(var(--grey-h), var(--grey-s), calc(var(--grey-l) + 35%));
+  --grey-color-80: hsl(var(--grey-h), var(--grey-s), calc(var(--grey-l) + 40%));
+
   font-color-primary: #000;
   font-color-light: #000;
   -font-color-dark: #fff;

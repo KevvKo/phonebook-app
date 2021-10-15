@@ -31,23 +31,6 @@ export default function SearchField() {
       dispatch( setPhoneBook( data.PhoneBookEntrys ));
     }
   }, [ data, loading ]);
-
-  const CustomTextField = styled(TextField)({
-    '& label.Mui-focused': {
-      color: 'var(--arctic-blue-color-dark)',
-    },
-    '& .MuiOutlinedInput-root': {
-      '& fieldset': {
-        borderColor: '',
-      },
-      '&:hover fieldset': {
-        borderColor:  'var(--arctic-blue-color-light)',
-      },
-      '&.Mui-focused fieldset': {
-        borderColor: 'var(--arctic-blue-color-dark)',
-      },
-    },
-  });
   
   const styles = {
     width: '98%', 
@@ -56,8 +39,14 @@ export default function SearchField() {
       color: 'var(--arctic-blue-color-dark)',
     },
     '& .MuiOutlinedInput-root': {
+      '& input': {
+        background: 'var(--grey-color-70)',
+        borderRadius: '20px',
+
+      },
       '& fieldset': {
-        borderColor: '',
+        borderRadius: '20px',
+        borderColor: 'var(--grey-color-70)',
       },
       '&:hover fieldset': {
         borderColor:  'var(--arctic-blue-color-light)',

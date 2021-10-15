@@ -33,6 +33,15 @@ export default function SettingsMenu(props) {
       props.handleClose();
     };
 
+    const styles = {
+      '&.Mui-selected': {
+        background: 'var(--arctic-blue-color)'
+      },
+      '&:hover': {
+        background: 'var(--arctic-blue-color-20)'
+      }
+    };
+    
     return (
           <Menu
             id="basic-menu"
@@ -48,11 +57,13 @@ export default function SettingsMenu(props) {
           >
             {options.map((option, index) => (
               <MenuItem
-                key={option.value}
+                key={ option.value }
                 selected={index === selectedIndex}
+                disabled={index === selectedIndex}
                 onClick={(event) => handleClick(event, index)}
+                sx={ styles }
               >
-                {option.label}
+                { option.label }
               </MenuItem>
             ))}
           </Menu>
