@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchField.css';
 // Componrnts
 import TextField from '@mui/material/TextField';
 // Hooks
@@ -38,6 +39,9 @@ export default function SearchField() {
         id="outlined-basic" 
         label={ t('searchField.label') } 
         variant="filled" 
+        size="small"
+        margin="dense"
+        sx={{ width: '95%'}}
       />
   );
 }

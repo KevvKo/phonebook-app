@@ -37,8 +37,8 @@ const dispatch = useDispatch();
   return (
     <div className="App">
       <AppHeader />
-      <div>
-        <SearchField ></SearchField>
+      <div className='container'>
+        <SearchField></SearchField>
         <PhoneBookTable></PhoneBookTable>
       </div>
     </div>
