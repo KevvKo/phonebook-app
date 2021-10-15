@@ -19,7 +19,7 @@ export default function PhoneBookTable() {
 
   return (
     
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} sx={{ width: '98%'}}>
       <Table>
         <TableHead>
           <TableRow>

@@ -1,0 +1,64 @@
+:root{
+     /* primary colors */
+  --arctic-blue-h: 180;
+  --arctic-blue-s: 20%;
+  --arctic-blue-l: 67%;
+
+  /* grey color */
+  --grey-h: 240;
+  --grey-s: 1%;
+  --grey-l: 53%;
+
+  /* color palettes */
+  --arctic-blue-color: hsl(
+    var(--arctic-blue-h), 
+    var(--arctic-blue-s), 
+    var(--arctic-blue-l)
+  );
+  --arctic-blue-color-10: hsl(
+    var(--arctic-blue-h),
+    var(--arctic-blue-s),
+    calc(var(--arctic-blue-l) + 5%)
+  );
+  --arctic-blue-color-20: hsl(
+    var(--arctic-blue-h),
+    var(--arctic-blue-s),
+    calc(var(--arctic-blue-l) + 10%)
+  );
+  --arctic-blue-color-30: hsl(
+    var(--arctic-blue-h),
+    var(--arctic-blue-s),
+    calc(var(--arctic-blue-l) + 15%)
+  );
+  --arctic-blue-color-40: hsl(
+    var(--arctic-blue-h),
+    var(--arctic-blue-s),
+    calc(var(--arctic-blue-l) + 20%)
+  );
+  --arctic-blue-color-50: hsl(
+    var(--arctic-blue-h),
+    var(--arctic-blue-s),
+    calc(var(--arctic-blue-l) + 25%)
+  );
+  --arctic-blue-color-60: hsl(
+    var(--arctic-blue-h),
+    var(--arctic-blue-s),
+    calc(var(--arctic-blue-l) + 30%)
+  );
+  --arctic-blue-color-70: hsl(
+    var(--arctic-blue-h),
+    var(--arctic-blue-s),
+    calc(var(--arctic-blue-l) + 35%)
+  );
+  --arctic-blue-color-80: hsl(
+    var(--arctic-blue-h),
+    var(--arctic-blue-s),
+    calc(var(--arctic-blue-l) + 40%)
+  );
+  --arctic-blue-color-light: hsl(180, 16%, 86%);
+  --arctic-blue-color-dark: hsl(180, 27%, 48%);
+
+  font-color-primary: #000;
+  font-color-light: #000;
+  -font-color-dark: #fff;
+}

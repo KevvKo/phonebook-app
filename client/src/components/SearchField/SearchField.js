@@ -1,7 +1,7 @@
 import React from 'react';
-import './SearchField.css';
 // Componrnts
 import TextField from '@mui/material/TextField';
+import { styled } from '@mui/material/styles';
 // Hooks
 import { useTranslation } from 'react-i18next';
 import { usePhoneBook } from '../../hooks/usePhoneBook';
@@ -17,7 +17,6 @@ export default function SearchField() {
   const dispatch = useDispatch();
   
   const handleChange = (e) => {
-
     const value = e.target.value;
     getPhoneBookEntrys({ 
       variables: {
@@ -33,15 +32,49 @@ export default function SearchField() {
     }
   }, [ data, loading ]);
 
+  const CustomTextField = styled(TextField)({
+    '& label.Mui-focused': {
+      color: 'var(--arctic-blue-color-dark)',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: '',
+      },
+      '&:hover fieldset': {
+        borderColor:  'var(--arctic-blue-color-light)',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'var(--arctic-blue-color-dark)',
+      },
+    },
+  });
+  
+  const styles = {
+    width: '98%', 
+    marginY: '20px',
+    '& label.Mui-focused': {
+      color: 'var(--arctic-blue-color-dark)',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: '',
+      },
+      '&:hover fieldset': {
+        borderColor:  'var(--arctic-blue-color-light)',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'var(--arctic-blue-color-dark)',
+      },
+    }
+  };
+
   return (
       <TextField 
+        className={ styles.textField }
         onChange={ handleChange } 
         id="outlined-basic" 
         label={ t('searchField.label') } 
-        variant="filled" 
         size="small"
-        margin="dense"
-        sx={{ width: '95%'}}
-      />
+        sx={ styles }/>
   );
 }
