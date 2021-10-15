@@ -1,8 +1,8 @@
 {
     "appHeader": {
-        "close": "Schließen",
         "contacts": "Kontakte",
-        "language": "Sprache"
+        "de": "Deutsch",
+        "en": "Englisch"
     },
     "phoneBookTable": {
         "phoneNumber": "Telefonnummer",
