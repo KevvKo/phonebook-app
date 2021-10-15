@@ -1,9 +1,12 @@
-{
-    "searchField": {
-        "label": "Search"
+{   
+    "appHeader": {
+        "contacts": "Contacts"
     },
     "phoneBookTable": {
         "phoneNumber": "Phonenumber",
         "name": "Name"
+    },
+    "searchField": {
+        "label": "Search"
     }
 }

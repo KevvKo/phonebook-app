@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../scripts/i18n';
-import { render} from '@testing-library/react';
+import { render } from '../../scripts/test-utils';
 import PhoneBookTable from './PhoneBookTable';
 
-test('renders learn react link', () => {
+test('should render PhoneBookTable component', () => {
   render(<PhoneBookTable />);
 });

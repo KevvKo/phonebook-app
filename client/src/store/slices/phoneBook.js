@@ -10,14 +10,7 @@ const phoneBookSlice = createSlice({
                 ...state,
                 phoneBook
             };
-        },  
-        // setPhoneNumber(state, action) {
-        //     const phoneNumber = action.payload;
-        //     return {
-        //         ...state,
-        //         phoneNumber: phoneNumber
-        //     };
-        // },
+        }
     }
 });
 

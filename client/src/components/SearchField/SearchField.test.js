@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../scripts/i18n';
-import { render, screen } from '@testing-library/react';
+import { render } from '../../scripts/test-utils';
 import SearchField from './SearchField';
 
-test('renders learn react link', () => {
+test('should render Searchfield component', () => {
   render(<SearchField />);
 });

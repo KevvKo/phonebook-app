@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 // Componrnts
 import TextField from '@mui/material/TextField';
 // Hooks
@@ -10,7 +9,7 @@ import { useDispatch } from 'react-redux';
 // Store
 import { setPhoneBook } from '../../store/slices/phoneBook';
 
-export default function SearchField(props) {
+export default function SearchField() {
 
   const [ t ] = useTranslation('common');
   const { getPhoneBookEntrys , data, loading } = usePhoneBook();
@@ -41,9 +40,4 @@ export default function SearchField(props) {
         variant="filled" 
       />
   );
-}
-
-SearchField.propTypes = {
-  data: PropTypes.object,
-  onChange: PropTypes.func
 }

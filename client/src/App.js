@@ -4,6 +4,8 @@ import './scripts/i18n';
 // Components
 import SearchField from './components/SearchField/SearchField';
 import PhoneBookTable from './components/PhoneBookTable/PhoneBookTable';
+import AppHeader from './components/AppHeader/AppHeader';
+//Hooks
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 // Store
@@ -34,8 +36,7 @@ const dispatch = useDispatch();
   
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      <AppHeader />
       <div>
         <SearchField ></SearchField>
         <PhoneBookTable></PhoneBookTable>

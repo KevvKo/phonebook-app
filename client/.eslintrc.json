@@ -15,6 +15,7 @@
         "react"
     ],
     "rules": {
-        "semi": [1, "always"]
+        "semi": [1, "always"],
+        "react/prop-types": 0 
     }
 }
