@@ -69,3 +69,7 @@ export default function SettingsMenu(props) {
           </Menu>
     );
   }
+
+  SettingsMenu.defaultProps = {
+    open: false
+  }
