@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { render as rtlRender } from '@testing-library/react';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
+import { MockedProvider } from '@apollo/client/testing';
 import phoneBookReducer from '../store/slices/phoneBook';
 
 
@@ -16,10 +17,14 @@ function render(
   } = {}
 ) {
   function Wrapper({ children }) {
+    const mocks = []; 
+
     return (
+      <MockedProvider mocks={mocks} addTypename={false}>
         <Provider store={store}>
             {children}
         </Provider>
+      </MockedProvider>
     );
   }
   return rtlRender(ui, { wrapper: Wrapper, ...renderOptions });

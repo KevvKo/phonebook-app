@@ -24,7 +24,7 @@ export default function AppHeader() {
     
     return (
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar sx={{ background: 'var(--arctic-blue-color)', color: 'var(--font-color-primary)'}}>
+        <AppBar position='static' sx={{ background: 'var(--arctic-blue-color)', color: 'var(--font-color-primary)'}}>
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             { t('appHeader.contacts')}

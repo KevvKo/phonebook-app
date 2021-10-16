@@ -14,8 +14,9 @@ import { usePhoneBook } from './hooks/usePhoneBook';
 
 function App() {
 
-const { getPhoneBookEntrys , data, loading } = usePhoneBook();
-const dispatch = useDispatch();
+  const { getPhoneBookEntrys , data, loading } = usePhoneBook();
+  const dispatch = useDispatch();
+
   useEffect(() => {
 
     getPhoneBookEntrys({ 

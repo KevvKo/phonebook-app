@@ -1,7 +1,24 @@
 import React from 'react';
-import { render } from './scripts/test-utils';
+import { render , act} from './scripts/test-utils';
+import {shallow} from 'enzyme';
 import App from './App';
 
-test('should render App component', () => {
-  // render(<App />);
+let container;
+
+beforeEach(() => {
+  container = document.createElement('div');
+  document.body.appendChild(container);
+});
+
+afterEach(() => {
+  document.body.removeChild(container);
+  container = null;
+});
+
+test('should render App component', async () => {
+  await act( async () => {
+    render(
+          <App />, container
+    )}
+  );
 });
