@@ -25,8 +25,8 @@ export default function AppHeader() {
     return (
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position='static' sx={{ background: 'var(--arctic-blue-color)', color: 'var(--font-color-primary)'}}>
-          <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Toolbar data-testid={'app-header-toolbar'} >
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} data-testid={'app-header-typography'}>
             { t('appHeader.contacts')}
             </Typography>
             <IconButton
@@ -36,8 +36,9 @@ export default function AppHeader() {
             aria-label="menu"
             sx={{ mr: 2 }}
             onClick={handleClick}
+            data-testid={'app-header-icon-button'}
           >
-            <SettingsIcon/>
+            <SettingsIcon data-testid={'app-header-settings-icon'}/>
           </IconButton>
           <SettingsMenu open={ open } handleClose={ handleClose } anchorElement={ anchorEl } />
           </Toolbar>

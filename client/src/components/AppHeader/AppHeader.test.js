@@ -1,32 +1,31 @@
 import React from 'react';
 import { render } from '../../scripts/test-utils';
-import { shallow } from 'enzyme';
 import AppHeader from './AppHeader';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import SettingsMenu from '../SettingsMenu/SettingsMenu';
-import Toolbar from '@mui/material/Toolbar';
 
 test('should render AppHeader component', () => {
   render(<AppHeader />);
 });
 
 describe('AppHeader', () => {
-  const element = shallow( <AppHeader /> );
-  
+
   it('should contain Toolbar Component', () => {
-    expect(element.find(Toolbar)).toHaveLength(1);
+    const { getByTestId } = render(<AppHeader />);
+    const toolbar = getByTestId('app-header-toolbar');
+    expect(toolbar).toBeTruthy;
   });
   it('should contain Typography Component', () => {
-    expect(element.find(Typography)).toHaveLength(1);
+    const { getByTestId } = render(<AppHeader />);
+    const typography = getByTestId('app-header-typography');
+    expect(typography).toBeTruthy;
   });
-  it('should contain one Typography Component', () => {
-    expect(element.find(Typography)).toHaveLength(1);
+  it('should contain one SettingsIcon Component', () => {
+    const { getByTestId } = render(<AppHeader />);
+    const settingsIcon = getByTestId('app-header-settings-icon');
+    expect(settingsIcon).toBeTruthy;
   });
   it('should contain one IconButton Component', () => {
-    expect(element.find(IconButton)).toHaveLength(1);
-  });
-  it('should contain one SettingsMenu Component', () => {
-    expect(element.find(SettingsMenu)).toHaveLength(1);
+    const { getByTestId } = render(<AppHeader />);
+    const iconButton = getByTestId('app-header-icon-button');
+    expect(iconButton).toBeTruthy;
   });
 });
