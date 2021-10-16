@@ -10,6 +10,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import SettingsMenu from '../SettingsMenu/SettingsMenu';
 // Hooks
 import { useTranslation } from 'react-i18next';
+
 export default function AppHeader() {
 
     const [ t ] = useTranslation('common');

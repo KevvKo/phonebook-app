@@ -44,7 +44,7 @@ export default function SettingsMenu(props) {
     
     return (
           <Menu
-            id="basic-menu"
+            id='settings-menu'
             sx={{ mr: 4 }}
             anchorEl={props.anchorElement}
             transformOrigin={{ horizontal: 'right', vertical: 'top' }}
@@ -57,6 +57,7 @@ export default function SettingsMenu(props) {
           >
             {options.map((option, index) => (
               <MenuItem
+                data-testid={'settings-menu-item'}
                 key={ option.value }
                 selected={index === selectedIndex}
                 disabled={index === selectedIndex}
