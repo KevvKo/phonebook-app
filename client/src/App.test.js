@@ -1,6 +1,5 @@
 import React from 'react';
 import { render , act} from './scripts/test-utils';
-import {shallow} from 'enzyme';
 import App from './App';
 
 let container;

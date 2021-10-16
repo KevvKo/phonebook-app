@@ -59,11 +59,13 @@ export default function SearchField() {
 
   return (
       <TextField 
+        data-testid={'search-field'}
         className={ styles.textField }
         onChange={ handleChange } 
         id="outlined-basic" 
         label={ t('searchField.label') } 
         size="small"
+        type='text'
         sx={ styles }/>
   );
 }
