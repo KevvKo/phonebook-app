@@ -10,12 +10,14 @@
     },
     "rules": {
         "no-unused-vars": [
-            "warning", 
+            1, 
             { 
                 "vars": "all", 
                 "args": "after-used", 
                 "ignoreRestSiblings": false 
             }
-        ]
+        ],
+        "quotes": [1, "single"],
+        "semi": [1, "always"]
     }
 }

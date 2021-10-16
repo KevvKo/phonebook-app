@@ -16,6 +16,17 @@
     ],
     "rules": {
         "semi": [1, "always"],
-        "react/prop-types": 0 
+        "react/prop-types": 0 ,
+        "quotes": [ 1 , "single"],
+        "no-unused-vars": [
+            1, 
+            { 
+                "vars": "all", 
+                "args": "after-used", 
+                "ignoreRestSiblings": false 
+            }
+        ],
+        "object-curly-spacing": [1, "always"],
+        "array-bracket-spacing": [1, "always"]
     }
 }

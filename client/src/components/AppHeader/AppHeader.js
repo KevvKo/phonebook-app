@@ -14,7 +14,7 @@ import { useTranslation } from 'react-i18next';
 export default function AppHeader() {
 
     const [ t ] = useTranslation('common');
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [ anchorEl, setAnchorEl ] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
       setAnchorEl(event.currentTarget);
@@ -25,7 +25,7 @@ export default function AppHeader() {
     
     return (
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position='static' sx={{ background: 'var(--arctic-blue-color)', color: 'var(--font-color-primary)'}}>
+        <AppBar position='static' sx={{ background: 'var(--arctic-blue-color)', color: 'var(--font-color-primary)' }}>
           <Toolbar data-testid={'app-header-toolbar'} >
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} data-testid={'app-header-typography'}>
             { t('appHeader.contacts')}

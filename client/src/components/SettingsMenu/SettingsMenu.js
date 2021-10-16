@@ -1,4 +1,3 @@
-
 import React from 'react';
 // Components
 import Menu from '@mui/material/Menu';
@@ -23,7 +22,7 @@ export default function SettingsMenu(props) {
       }
     ];
 
-    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [ selectedIndex, setSelectedIndex ] = useState(0);
 
     const handleClick = (event, index) => {
 

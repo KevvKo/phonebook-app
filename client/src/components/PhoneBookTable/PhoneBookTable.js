@@ -19,12 +19,12 @@ export default function PhoneBookTable() {
 
   return (
     
-    <TableContainer component={Paper} sx={{ width: '98%'}}>
+    <TableContainer component={Paper} sx={{ width: '98%' }}>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell sx={{ width: '50%'}}> {t( 'phoneBookTable.name' )} </TableCell>
-            <TableCell sx={{ width: '50%'}}> {t( 'phoneBookTable.phoneNumber' )}</TableCell>
+            <TableCell sx={{ width: '50%' }}> {t( 'phoneBookTable.name' )} </TableCell>
+            <TableCell sx={{ width: '50%' }}> {t( 'phoneBookTable.phoneNumber' )}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
