@@ -4,13 +4,12 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 // Hooks
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
-// Utilits
-import i18n from '../../scripts/i18n';
+import { useState, useEffect } from 'react';
+
 
 export default function SettingsMenu(props) {
 
-    const [ t ] = useTranslation('common');
+    const [ t, i18n ] = useTranslation('common');
     const options = [
       {
         label:  t('appHeader.en'),
@@ -41,6 +40,12 @@ export default function SettingsMenu(props) {
       }
     };
     
+    useEffect(() => {
+      if( i18n.language === 'de' ) {
+        setSelectedIndex(1);
+      }
+    }, [ i18n ]);
+
     return (
           <Menu
             id='settings-menu'
