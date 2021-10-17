@@ -18,7 +18,8 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@graphql-eslint/eslint-plugin": "^2.2.0",
     "@graphql-tools/schema": "^8.2.0",
-    "eslint": "^8.0.0"
+    "eslint": "^8.0.1"
   }
 }

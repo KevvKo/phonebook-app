@@ -8,6 +8,11 @@
         "ecmaVersion": 13,
         "sourceType": "module"
     },
+    "globals": {
+        "require": true,
+        "module": true
+    },
+    "plugins": ["@graphql-eslint"],
     "rules": {
         "no-unused-vars": [
             1, 
@@ -17,7 +22,9 @@
                 "ignoreRestSiblings": false 
             }
         ],
-        "quotes": [1, "single"],
-        "semi": [1, "always"]
+        "quotes": [ 1, "single"],
+        "semi": [ 1, "always"],
+        "object-curly-spacing": [1, "always"],
+        "array-bracket-spacing": [1, "always"]
     }
 }
