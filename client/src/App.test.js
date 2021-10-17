@@ -1,23 +1,21 @@
 import React from 'react';
-import { render , act} from './scripts/test-utils';
+import { render , act } from './scripts/test-utils';
 import App from './App';
 
-let container;
+describe(' App Component', () => {
 
-beforeEach(() => {
-  container = document.createElement('div');
-  document.body.appendChild(container);
-});
-
-afterEach(() => {
-  document.body.removeChild(container);
-  container = null;
-});
-
-test('should render App component', async () => {
-  await act( async () => {
-    render(
-          <App />, container
-    )}
-  );
+  it('should contain a PhoneBookTable Component', async () => {
+    await act( async () => {
+      const { getByTestId } = render(<App />);
+      const PhoneBookTable = getByTestId('phone-book-table');  
+      expect(PhoneBookTable).toBeTruthy();
+    });
+  });
+  it('should contain a Searchfield Component', async () => {
+    await act( async () => {
+      const { getByTestId } = render(<App />);
+      const SearchField = getByTestId('search-field');  
+      expect(SearchField).toBeTruthy();
+    });
+  });
 });

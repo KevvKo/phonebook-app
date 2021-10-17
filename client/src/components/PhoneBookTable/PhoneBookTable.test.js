@@ -22,10 +22,4 @@ describe('PhoneBookTable', () => {
     const TableBody = getByTestId('phone-book-table-body');
     expect(TableBody).toBeTruthy;
   });
-  it('should contain', () => {
-    const { getAllByRole } = render(<PhoneBookTable />);
-    const TableRows = getAllByRole('phone-book-table-row');
-    expect(TableRows).toBeTruthy;
-    expect(TableRows.length).toBeGreaterThan(1);
-  });
 });

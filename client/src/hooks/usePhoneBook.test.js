@@ -81,8 +81,4 @@ describe('usePhoneBook', () => {
           renderHook( () => getPhoneBookEntrys(), { wrapper });
         });  
     });
-
-    it('should return error when requests fails', async () => {
-
-    });
 });

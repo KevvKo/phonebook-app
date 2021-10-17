@@ -31,12 +31,6 @@ function render(
         phone: '0156/24514531'
     };
 
-    const mock = [
-      contact1,
-      contact2,
-      contact3
-    ];
-
     // Mocks
     const contactsQueryMock = {
         request: {
