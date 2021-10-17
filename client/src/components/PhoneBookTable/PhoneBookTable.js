@@ -20,20 +20,21 @@ export default function PhoneBookTable() {
   return (
     
     <TableContainer component={Paper} sx={{ width: '98%' }}>
-      <Table>
-        <TableHead>
+      <Table data-testid={'phone-book-table'}>
+        <TableHead data-testid={'phone-book-table-head'} >
           <TableRow>
             <TableCell sx={{ width: '50%' }}> {t( 'phoneBookTable.name' )} </TableCell>
             <TableCell sx={{ width: '50%' }}> {t( 'phoneBookTable.phoneNumber' )}</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody data-testid={'phone-book-table-body'}>
           { phoneBookEntrys &&
             phoneBookEntrys.map ( (c, i) =>  (
               
               <TableRow
                 key={ i }
                 sx={{ '&:last-child td, &:last-child': { border: 0 } }}
+                role='phone-book-table-row'
               >
                 <TableCell component="td" scope="row">
                   { c.name }
