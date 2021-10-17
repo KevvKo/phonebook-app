@@ -4,6 +4,9 @@
         "de": "Deutsch",
         "en": "Englisch"
     },
+    "error":{ 
+        "message": "Oh neeeeiiiinn.... Irgendetwas ist schief gelaufen. Bitte versuche es erneut oder komm später wieder." 
+    },
     "phoneBookTable": {
         "phoneNumber": "Telefonnummer",
         "name": "Name"  

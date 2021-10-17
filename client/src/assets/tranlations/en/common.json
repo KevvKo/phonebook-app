@@ -4,6 +4,9 @@
         "de": "German",
         "en": "English"
     },
+    "error": {
+        "message": "Oh nooo... Something is gone wrong. Please try again or come later back again"
+    },
     "phoneBookTable": {
         "phoneNumber": "Phonenumber",
         "name": "Name"

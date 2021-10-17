@@ -5,6 +5,8 @@ import './scripts/i18n';
 import SearchField from './components/SearchField/SearchField';
 import PhoneBookTable from './components/PhoneBookTable/PhoneBookTable';
 import AppHeader from './components/AppHeader/AppHeader';
+import Progress from './components/Progress/Progress';
+import Error from './components/Error/Error';
 //Hooks
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
@@ -14,14 +16,14 @@ import { usePhoneBook } from './hooks/usePhoneBook';
 
 function App() {
 
-  const { getPhoneBookEntrys , data, loading } = usePhoneBook();
+  const { getPhoneBookEntrys , data, loading , error } = usePhoneBook();
   const dispatch = useDispatch();
 
   useEffect(() => {
 
     getPhoneBookEntrys({ 
       variables: {
-        query: ''
+        query: ''      
       }
     });
   }, []);
@@ -32,15 +34,17 @@ function App() {
       dispatch( setPhoneBook( data.PhoneBookEntrys ));
     }
   }, [ data, loading ]);
-
-  if(loading) return ' waiting....';
   
   return (
     <div className="App">
       <AppHeader />
       <div className='container'>
         <SearchField></SearchField>
-        <PhoneBookTable></PhoneBookTable>
+        { loading && <Progress /> }
+        { error && < Error /> }
+        { !error && !loading &&
+          <PhoneBookTable></PhoneBookTable>
+        }
       </div>
     </div>
   );
