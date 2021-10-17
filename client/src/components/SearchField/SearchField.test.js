@@ -24,8 +24,8 @@ describe( 'SearchField', () => {
     const input = textField.querySelector('input');
 
     await act( async () => {
-      fireEvent.change( input, {target: {value: 'foo'}});
+      fireEvent.change( input, { target: { value: 'foo' } });
       expect(input.value).toBe('foo');
     });
   });
-})
+});

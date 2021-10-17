@@ -41,8 +41,8 @@ function App() {
       <div className='container'>
         <SearchField></SearchField>
         { loading && <Progress /> }
-        { error && < Error /> }
-        { !error && !loading &&
+        { error && <Error /> }
+        { data && !loading &&
           <PhoneBookTable></PhoneBookTable>
         }
       </div>

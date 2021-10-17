@@ -9,8 +9,8 @@ describe(' App Component', () => {
 
   it('should render', async () => {
     await act( async () => {
-      render(<App />)}
-    );
+      render(<App />);
+    });
   });
 
   it('should contain a PhoneBookTable Component', async () => {

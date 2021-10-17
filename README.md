@@ -68,19 +68,13 @@ After this structures, you can use the phonebook-app:
 Like above described, to run the app, you can use docker.
 Sometimes it is necessary to run the docker commands as root.
 
-Starts docker-compose with a new build `docker-compose up --build` or run
-```
-npm start
-```
+Starts docker-compose with a new build `docker-compose up --build`
+
 Building the docker image: `docker-compose build` or run
-```
-npm build
-```
+
 
 Startsthe docker container `docker-compose up` or run
-```
-npm serve
-```
+
 ## Available scripts
 ### `npm start`
 Starts to build the app with docker-compose and starting the container
