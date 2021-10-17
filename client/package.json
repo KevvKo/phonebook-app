@@ -36,7 +36,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "docker:build": "docker build . -t docker-frontend",
-    "docker:start": "docker run -p 3000:3 000 -d docker-frontend"
+    "docker:start": "docker run -it -p 3000:3000 -d docker-frontend"
 
   },
   "eslintConfig": {

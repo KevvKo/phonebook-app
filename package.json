@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "sudo docker-compose up --build",
+    "serve": "docker-compose up", 
+    "build": "docker-compose build",
     "client:start": "cd client && npm start",
     "api:start": "cd api && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"

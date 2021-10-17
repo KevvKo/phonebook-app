@@ -1,7 +1,7 @@
 FROM node:14.16.0
-WORKDIR /usr/src/app
+WORKDIR /app
 COPY package*.json ./
 RUN yarn
-COPY . .
+COPY . ./
 EXPOSE 3000
-CMD ["react-scripts", "start"]
+CMD ["npm", "start"]
